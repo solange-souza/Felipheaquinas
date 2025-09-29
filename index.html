@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FFSSA Tecnologia</title>
+  <meta name="description" content="FFSSA Tecnologia — desk help, redes, criação de sites e administração de banco de dados" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#0ea5e9; /* azul claro */
+      --accent-2:#0b63c6; /* azul escuro */
+      --glass: rgba(255,255,255,0.04);
+      --muted:#9aa7b2;
+      --radius:14px;
+      --maxw:1100px;
+      --gap:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg),#0a0f18);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{width:100%;max-width:var(--maxw)}
+
+    header{
+      display:flex;align-items:center;gap:18px;margin-bottom:28px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;
+    }
+    .logo{
+      width:84px;height:84px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));box-shadow:0 6px 30px rgba(14,165,233,0.12),inset 0 -6px 18px rgba(11,99,198,0.12);
+    }
+    .logo .mark{font-weight:800;font-size:28px;letter-spacing:1px;color:rgba(255,255,255,0.96)}
+    h1{font-size:22px;margin:0}
+    p.lead{color:var(--muted);margin:4px 0 0;font-size:14px}
+
+    nav{margin-left:auto}
+    .nav-list{display:flex;gap:12px}
+    .nav-list a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-size:14px}
+    .nav-list a:hover{background:rgba(255,255,255,0.02);color:var(--accent)}
+
+    main{
+      display:grid;grid-template-columns:1fr 360px;gap:var(--gap);
+    }
+
+    .hero{
+      background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+      padding:28px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6);
+    }
+    .hero h2{margin-top:0;font-size:20px}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+    .service{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .service h3{margin:0;font-size:15px}
+    .service p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+    .btn{background:var(--accent);color:#002129;border:none;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(14,165,233,0.12)}
+
+    aside{
+      position:relative;
+    }
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 8px 30px rgba(2,6,23,0.6)
+    }
+    .contact-list{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+    .contact-item{display:flex;gap:12px;align-items:center}
+    .chip{background:var(--glass);padding:10px;border-radius:10px;font-weight:600}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr}
+      .logo{width:64px;height:64px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <div class="mark">FF</div>
+        </div>
+        <div>
+          <h1>FFSSA Tecnologia</h1>
+          <p class="lead">Desk Help • Redes • Criação de Sites • Administração de Bancos de Dados</p>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-list">
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+          <a href="#sobre">Sobre</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="servicos">
+        <h2>Serviços</h2>
+        <p class="lead">Fornecemos soluções confiáveis e seguras para empresas e autônomos — suporte técnico, redes, desenvolvimento web e administração de bancos de dados.</p>
+
+        <div class="services">
+          <div class="service">
+            <h3>Desk Help</h3>
+            <p>Atendimento remoto e presencial para suporte de estações, instalação de softwares, recuperação de dados e orientação de uso.</p>
+          </div>
+          <div class="service">
+            <h3>Redes</h3>
+            <p>Projeto e manutenção de redes locais, cabeamento, configuração de roteadores, switches e firewalls.</p>
+          </div>
+          <div class="service">
+            <h3>Criação de Sites</h3>
+            <p>Design responsivo, hospedagem, integração com CMS e otimização para motores de busca (SEO).</p>
+          </div>
+          <div class="service">
+            <h3>Administração de BD</h3>
+            <p>Modelagem, backup, otimização de queries e administração de MySQL, PostgreSQL e SQL Server.</p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn" id="contratarBtn">Solicitar Orçamento</button>
+          <button class="btn secondary" id="saibaBtn">Saiba Mais</button>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card" id="contato">
+          <h3>Contato</h3>
+          <p class="lead">Fale conosco para um diagnóstico gratuito e orçamento.</p>
+          <div class="contact-list">
+            <div class="contact-item"><div class="chip">📞</div><div>+55 (11) 9XXXX-XXXX</div></div>
+            <div class="contact-item"><div class="chip">✉️</div><div>contato@ffssa.com.br</div></div>
+            <div class="contact-item"><div class="chip">📍</div><div>São Paulo, Brasil</div></div>
+          </div>
+
+          <hr style="margin:16px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+          <h4 style="margin:0 0 8px 0">Horário</h4>
+          <div style="color:var(--muted);font-size:13px">Seg–Sex • 9:00 — 18:00</div>
+
+        </div>
+
+        <div style="height:18px"></div>
+        <div class="card" id="sobre">
+          <h3>Sobre</h3>
+          <p class="lead">Somos uma empresa de tecnologia dedicada a entregar soluções práticas e confiáveis para pequenas e médias empresas.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © FFSSA Tecnologia — Todos os direitos reservados
+    </footer>
+  </div>
+
+  <script>
+    // Interações simples
+    document.getElementById('contratarBtn').addEventListener('click', function(){
+      const nome = prompt('Qual seu nome?');
+      const servico = prompt('Qual serviço você precisa? (Desk Help / Redes / Criação de Sites / BD)');
+      if(nome && servico){
+        alert('Obrigado, ' + nome + '! Recebemos sua solicitação para: ' + servico + '. Em breve entraremos em contato.');
+      } else {
+        alert('Solicitação cancelada. Por favor preencha seu nome e o serviço necessário.');
+      }
+    });
+
+    document.getElementById('saibaBtn').addEventListener('click', function(){
+      const box = document.getElementById('sobre');
+      box.scrollIntoView({behavior:'smooth'});
+    });
+  </script>
+</body>
+</html>
